@@ -1,83 +1,163 @@
-# Spam Detection using Machine Learning
+# 📩 Spam Detection using Deep Learning
 
-## Overview
+## 📌 Project Overview
 
-This project implements a machine learning model for SMS spam detection using Natural Language Processing (NLP). The model classifies incoming messages as either **Spam** or **Ham (Not Spam)**.
+This project presents an end-to-end Natural Language Processing (NLP) solution for detecting spam SMS messages using Deep Learning.
 
----
+The objective is to automatically classify SMS messages into:
 
-## Dataset
+- ✅ Ham (Legitimate Messages)
+- 🚫 Spam Messages
 
-- SMS Spam Collection Dataset
-- Binary Classification
-- Labels:
-  - Spam
-  - Ham
+The project demonstrates the complete machine learning workflow, including data preprocessing, feature engineering, model development, evaluation, and prediction.
 
 ---
 
-## Technologies Used
+## 📂 Dataset
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- TensorFlow / Keras
-- Matplotlib
-- Seaborn
+The dataset contains SMS messages labelled as either **Spam** or **Ham**.
+
+### Features
+
+| Column | Description |
+|---------|-------------|
+| Category | Spam or Ham |
+| Message | SMS Text |
+
+The dataset was preprocessed before training to improve model performance.
 
 ---
 
-## Data Preprocessing
+## ⚙️ Data Preprocessing
 
-- Lowercasing
+The following preprocessing techniques were applied:
+
+- Removal of punctuation
+- Lowercasing text
+- Stopword removal
 - Tokenization
-- Padding
-- Text Vectorization
-- Stopword Removal
+- Sequence Padding
+- Label Encoding
+- Train/Test Split
 
 ---
 
-## Model
+## 🧠 Deep Learning Model
 
-The project explores deep learning for text classification.
+Model Architecture
 
-Layers include:
+Input
 
-- Embedding
-- GlobalAveragePooling1D
-- Dense Layers
-- Sigmoid Output
+⬇️
+
+Embedding Layer
+
+⬇️
+
+GlobalAveragePooling1D
+
+⬇️
+
+Dense Layer (ReLU)
+
+⬇️
+
+Dense Layer
+
+⬇️
+
+Sigmoid Output
 
 ---
 
-## Evaluation
+## 📊 Model Evaluation
 
-Performance metrics include:
+The project was evaluated using:
 
 - Accuracy
 - Precision
 - Recall
 - F1 Score
+- ROC-AUC
 - Confusion Matrix
 
----
-
-## Results
-
-The model achieved high classification performance on the validation dataset.
+The notebook also compares the deep learning model with a Logistic Regression baseline.
 
 ---
 
-## Future Improvements
+## 🛠️ Technologies Used
 
-- LSTM
-- GRU
+- Python
+- TensorFlow / Keras
+- NumPy
+- Pandas
+- Scikit-learn
+- Matplotlib
+- NLTK
+
+---
+
+## 📁 Repository Structure
+
+```
+spam-detection-nlp
+
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── notebooks/
+├── data/
+├── images/
+└── report/
+```
+
+---
+
+## 🚀 How to Run
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/spam-detection-nlp.git
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open
+
+```
+spam_detection.ipynb
+```
+
+Run all cells.
+
+---
+
+## 📈 Future Improvements
+
+Future versions of this project may include:
+
+- LSTM Networks
+- GRU Networks
+- Transformer Models
 - BERT
 - Hyperparameter Optimization
+- Deployment with Streamlit or Flask
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 Victor Nnamani
+
+Machine Learning | Data Engineering | Deep Learning
