@@ -1,78 +1,130 @@
-# 📩 Spam Detection using Deep Learning
 
-## 📌 Project Overview
 
-This project presents an end-to-end Natural Language Processing (NLP) solution for detecting spam SMS messages using Deep Learning.
+> An end-to-end Natural Language Processing (NLP) project for classifying SMS messages as **Spam** or **Ham** using TensorFlow/Keras and Deep Learning.
 
-The objective is to automatically classify SMS messages into:
-
-- ✅ Ham (Legitimate Messages)
-- 🚫 Spam Messages
-
-The project demonstrates the complete machine learning workflow, including data preprocessing, feature engineering, model development, evaluation, and prediction.
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange?logo=tensorflow)
+![Keras](https://img.shields.io/badge/Keras-Neural%20Networks-red?logo=keras)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-f7931e?logo=scikitlearn)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 📂 Dataset
+# 📌 Project Overview
 
-The dataset contains SMS messages labelled as either **Spam** or **Ham**.
+Spam messages remain one of the biggest challenges in digital communication. Manual filtering is inefficient, and traditional rule-based systems often fail to detect evolving spam patterns.
 
-### Features
+This project develops a **Deep Learning-based Natural Language Processing (NLP)** model capable of automatically classifying SMS messages into **Spam** or **Ham (Legitimate Messages)**.
+
+The project demonstrates an end-to-end machine learning workflow including:
+
+- Data preprocessing
+- Text cleaning
+- Tokenization
+- Sequence padding
+- Model development
+- Model evaluation
+- Prediction
+
+---
+
+# 📊 Project Snapshot
+
+| Feature | Details |
+|----------|---------|
+| Problem | SMS Spam Detection |
+| Task | Binary Text Classification |
+| Dataset | SMS Messages |
+| Samples | 5,572 |
+| Classes | Spam / Ham |
+| Framework | TensorFlow / Keras |
+| Language | Python |
+
+---
+
+# 📂 Dataset
+
+The dataset contains SMS text messages labelled as either:
+
+- Ham (Legitimate Messages)
+- Spam Messages
+
+### Dataset Columns
 
 | Column | Description |
-|---------|-------------|
-| Category | Spam or Ham |
+|----------|------------|
+| Category | Message Label |
 | Message | SMS Text |
 
-The dataset was preprocessed before training to improve model performance.
-
 ---
 
-## ⚙️ Data Preprocessing
+# ⚙️ Data Preprocessing
 
-The following preprocessing techniques were applied:
+The following preprocessing steps were performed before training:
 
-- Removal of punctuation
+- Loading the dataset with Pandas
+- Removing punctuation
 - Lowercasing text
-- Stopword removal
-- Tokenization
-- Sequence Padding
-- Label Encoding
-- Train/Test Split
+- Removing stopwords
+- Text tokenization
+- Sequence padding
+- Label encoding
+- Train/Test split
+
+These preprocessing steps convert raw text into numerical sequences that can be processed by a deep learning model.
 
 ---
 
-## 🧠 Deep Learning Model
+# 🧠 Model Architecture
 
-Model Architecture
+The deep learning architecture used in this project is shown below.
 
-Input
+```
+Input SMS
 
-⬇️
+      │
+
+      ▼
 
 Embedding Layer
 
-⬇️
+      │
+
+      ▼
 
 GlobalAveragePooling1D
 
-⬇️
+      │
+
+      ▼
 
 Dense Layer (ReLU)
 
-⬇️
+      │
+
+      ▼
 
 Dense Layer
 
-⬇️
+      │
+
+      ▼
 
 Sigmoid Output
 
+      │
+
+      ▼
+
+Spam / Ham Prediction
+```
+
 ---
 
-## 📊 Model Evaluation
+# 📈 Model Evaluation
 
-The project was evaluated using:
+The model was evaluated using multiple classification metrics including:
 
 - Accuracy
 - Precision
@@ -81,44 +133,111 @@ The project was evaluated using:
 - ROC-AUC
 - Confusion Matrix
 
-The notebook also compares the deep learning model with a Logistic Regression baseline.
+A Logistic Regression model was also trained as a baseline for comparison.
 
 ---
 
-## 🛠️ Technologies Used
+# 📚 Technologies Used
 
 - Python
-- TensorFlow / Keras
-- NumPy
+- TensorFlow
+- Keras
 - Pandas
-- Scikit-learn
+- NumPy
+- Scikit-Learn
 - Matplotlib
 - NLTK
 
 ---
 
-## 📁 Repository Structure
+# 🔄 Project Workflow
 
 ```
-spam-detection-nlp
+SMS Message
 
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── notebooks/
-├── data/
-├── images/
-└── report/
+      │
+
+      ▼
+
+Text Cleaning
+
+      │
+
+      ▼
+
+Tokenization
+
+      │
+
+      ▼
+
+Padding
+
+      │
+
+      ▼
+
+Embedding Layer
+
+      │
+
+      ▼
+
+Deep Learning Model
+
+      │
+
+      ▼
+
+Prediction
+
+      │
+
+      ▼
+
+Spam / Ham
 ```
 
 ---
 
-## 🚀 How to Run
+# 📁 Repository Structure
+
+```
+spam-detection-nlp/
+
+│── README.md
+
+│── requirements.txt
+
+│── .gitignore
+
+│── notebooks/
+
+│      └── spam_detection.ipynb
+
+│── data/
+
+│      └── mail_data.csv
+
+│── images/
+
+│── report/
+```
+
+---
+
+# 🚀 Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/spam-detection-nlp.git
+git clone https://github.com/Liquidfingers/spam-detection-nlp.git
+```
+
+Move into the project directory
+
+```bash
+cd spam-detection-nlp
 ```
 
 Install dependencies
@@ -143,21 +262,41 @@ Run all cells.
 
 ---
 
-## 📈 Future Improvements
+# 🎯 Skills Demonstrated
 
-Future versions of this project may include:
+This project demonstrates practical experience in:
 
-- LSTM Networks
-- GRU Networks
-- Transformer Models
-- BERT
-- Hyperparameter Optimization
-- Deployment with Streamlit or Flask
+- Natural Language Processing
+- Deep Learning
+- Binary Classification
+- TensorFlow/Keras
+- Text Preprocessing
+- Feature Engineering
+- Model Evaluation
+- Machine Learning
 
 ---
 
-## 👨‍💻 Author
+# 🚀 Future Improvements
 
-Victor Nnamani
+Future versions of this project could include:
 
-Machine Learning | Data Engineering | Deep Learning
+- Long Short-Term Memory (LSTM) Networks
+- Gated Recurrent Units (GRU)
+- Transformer Models
+- BERT
+- Hyperparameter Optimization
+- Streamlit Deployment
+- FastAPI Deployment
+
+---
+
+# 👨‍💻 Author
+
+**Victor Nnamani**
+
+Machine Learning Engineer | Data Engineer | Deep Learning Enthusiast
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
